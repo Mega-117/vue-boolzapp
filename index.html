@@ -95,24 +95,7 @@
 
                                     </div>
                                 </div>
-                                <div class="chat-list d-flex bg-chat-list p-2">
 
-                                    <div class="chat d-flex align-items-center flex-grow-1">
-                                        <div class="avatar-container flex-shrink-0">
-                                            <img src="img/avatar_1.jpg" alt="">
-                                        </div>
-                                        <div class="ps-3 line-height-1">
-                                            <h5 class="m-0">Nome Utente</h5><!-- nome utente -->
-                                            <span class="text-small text-light-grey">ultimo messaggio...</span>
-
-                                        </div>
-                                    </div>
-                                    <div class="">
-                                        <span class="text-light-grey">data</span>
-                                        <!-- position absolute data ultimo messaggio -->
-
-                                    </div>
-                                </div>
 
 
                             </div>
@@ -160,15 +143,16 @@
                         <!-- message area -->
                         <div class="message-area d-flex p-2 gap-1">
 
-                            <div class="btn btn-outline-secondary border-0" type="button" id="button-addon1"><i
-                                    class="far fa-smile"></i></div>
+                            <button class="btn btn-outline-secondary border-0" type="button" id="button-addon1"><i
+                                    class="fs-4 far fa-smile"></i></button>
                             <div class="input-group">
 
-                                <input type="text" class="form-control bbb" placeholder="Recipient's username"
-                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input v-model="newMessage" type="text" class="form-control bbb"
+                                    placeholder="Scrivi un messaggio" aria-label="Recipient's username"
+                                    aria-describedby="button-addon2">
                             </div>
                             <button class="btn btn-outline-secondary border-0" type="button" id="button-addon2"><i
-                                    class="fas fa-microphone"></i></button>
+                                    class="fs-4 fas fa-microphone"></i></button>
 
                         </div>
                     </div>

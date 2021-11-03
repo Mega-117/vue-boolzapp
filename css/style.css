@@ -72,6 +72,9 @@ a{
     overflow: hidden;
 }
 
+.notifications-status i{
+    color: #90daf9;
+}
 
 .avatar-container img{
     height: 100%;
