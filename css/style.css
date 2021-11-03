@@ -93,7 +93,8 @@ a{
 
 .chats-section{
     background-color: #fafafa;
-    flex-grow: 1;
+    height: calc(90vh - 70px - 66px);
+    overflow: auto;
 }
 
 
@@ -103,10 +104,13 @@ a{
 
 .box-chat{
     flex-grow: 1;
-    height: 300px;
+    height: calc(90vh - 66px - 54px);
     background-image: url("../img/mine.jpg");
-    margin-left: 5px;
     margin-right: 5px;
+}
+
+.message-area{
+    background-color: #f4ede9;
 }
 
 
@@ -114,7 +118,6 @@ a{
 .btn-outline-secondary {
     color: #6c757d;
     border-color: #ced4da;
-    border-right: 0
 }
 
 .btn-outline-secondary {
