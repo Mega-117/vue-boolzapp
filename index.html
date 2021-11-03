@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Boolzapp</title>
+</head>
+
+<body>
+    <div id="app">
+        <header></header>
+        <main>
+            <div class="bg-pag"></div>
+            <div class="bg-green-bar"></div><!-- postion absolute -->
+            <div class="container">
+                <div class="row">
+                    <!-- colonna sinistra -->
+                    <div class="col-4">
+                        <!-- nav left -->
+                        <div class="nav-left">
+                            <div class="user-data">
+                                <div class="avatar-container">
+                                    <img src="" alt="">
+                                </div>
+                                <h3></h3><!-- nome utente -->
+                            </div>
+                            <div>
+                                <i></i><!-- icon -->
+                                <i></i><!-- icon -->
+                                <i></i><!-- icon -->
+                            </div>
+                        </div>
+
+                        <!-- notifications-settings -->
+                        <div class="notifications-settings">
+                            <div class="notifications-status">
+                                <img src="" alt="">
+                            </div>
+                            <h3></h3>
+                            <a href="#">
+                                <span></span>
+                            </a>
+                        </div>
+
+                        <!-- search bar -->
+                        <div>
+                            <form class="d-flex">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                        </div>
+
+                        <!-- chat list -->
+                        <div class="chat-list">
+                            <div class="chat">
+                                <div class="avatar-container">
+                                    <img src="" alt="">
+                                </div>
+
+                                <div>
+                                    <h3></h3> <!-- nome utente -->
+                                    <span></span> <!-- ultimo messaggio -->
+                                </div>
+
+                                <span></span> <!-- position absolute data ultimo messaggio -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- colonna destra -->
+                    <div class="col-8">
+                        <div class="nav-right">
+                            <div class="avatar-container">
+                                <img src="" alt="">
+                            </div>
+
+                            <div>
+                                <h3></h3> <!-- nome utente -->
+                                <span></span> <!-- ultimo messaggio -->
+                            </div>
+
+                            <div>
+                                <i></i><!-- icon -->
+                                <i></i><!-- icon -->
+                                <i></i><!-- icon -->
+                            </div>
+                        </div>
+
+                        <!-- box chat -->
+                        <div class="box-chat">
+                            <div class="message-sended">
+                                <div class="message-container">
+                                    <span></span>
+                                    <span></span><!-- position absolute data -->
+                                </div>
+                            </div>
+                            <div class="message-recived">
+                                <div class="message-container">
+                                    <span></span>
+                                    <span></span><!-- position absolute data -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- message area -->
+                        <div class="message-area">
+                            <!-- emoji -->
+                            <div>
+                                <i></i>
+                            </div>
+
+                            <!-- message-bar -->
+                            <div class="message-bar">
+                                <input type="text" class="form-control" placeholder="City" aria-label="City">
+                            </div>
+
+                            <!-- audio message -->
+                            <div>
+                                <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
