@@ -26,10 +26,10 @@
         <main>
             <div class="bg-page"></div>
             <div class="bg-green-bar"></div><!-- postion absolute -->
-            <div class="container bg-white mt-3 p-3">
+            <div class="container bg-white mt-3 p-0">
                 <div class="row">
                     <!-- colonna sinistra -->
-                    <div class="col-4">
+                    <div class="col-4 pe-0">
                         <!-- nav left -->
                         <div class="nav-left d-flex bg-nav p-2">
                             <div class="user-data d-flex align-items-center flex-grow-1">
@@ -46,57 +46,111 @@
                         </div>
 
                         <!-- notifications-settings -->
-                        <div class="notifications-settings">
-                            <div class="notifications-status">
-                                <img src="" alt="">
+                        <div
+                            class="notifications-settings d-flex align-items-center flex-grow-1 p-2 bg-notifications-settings">
+
+                            <div
+                                class="notifications-status d-flex align-items-center justify-content-center flex-shrink-0 bg-white">
+                                <i class="fs-5 fas fa-bell-slash"></i>
                             </div>
-                            <h3></h3>
-                            <a href="#">
-                                <span></span>
-                            </a>
-                        </div>
+                            <div class="ps-2 line-height-1">
+                                <h5 class="m-0">Ricevi notifiche di nuovi messaggi</h5><!-- nome utente -->
+                                <a href="#">
+                                    <span class="text-small">ultimo accesso</span>
+                                </a>
 
-                        <!-- search bar -->
-                        <div>
-                            <form class="d-flex">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                        </div>
+                            </div>
 
-                        <!-- chat list -->
-                        <div class="chat-list">
-                            <div class="chat">
-                                <div class="avatar-container">
-                                    <img src="" alt="">
+
+                        </div>
+                        <div class="chats-section">
+
+                            <!-- search bar -->
+                            <div class="p-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                            class="fas fa-search"></i></button>
+                                    <input type="text" class="form-control" placeholder=""
+                                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                </div>
+                            </div>
+
+                            <!-- chat list -->
+                            <div class="chat-list-container me-2">
+
+                                <div class="chat-list d-flex bg-chat-list p-2">
+
+                                    <div class="chat d-flex align-items-center flex-grow-1">
+                                        <div class="avatar-container flex-shrink-0">
+                                            <img src="img/avatar_1.jpg" alt="">
+                                        </div>
+                                        <div class="ps-3 line-height-1">
+                                            <h5 class="m-0">Nome Utente</h5><!-- nome utente -->
+                                            <span class="text-small">ultimo accesso</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <span>data</span> <!-- position absolute data ultimo messaggio -->
+
+                                    </div>
+                                </div>
+                                <div class="chat-list d-flex bg-chat-list p-2">
+
+                                    <div class="chat d-flex align-items-center flex-grow-1">
+                                        <div class="avatar-container flex-shrink-0">
+                                            <img src="img/avatar_1.jpg" alt="">
+                                        </div>
+                                        <div class="ps-3 line-height-1">
+                                            <h5 class="m-0">Nome Utente</h5><!-- nome utente -->
+                                            <span class="text-small">ultimo accesso</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <span>data</span> <!-- position absolute data ultimo messaggio -->
+
+                                    </div>
                                 </div>
 
-                                <div>
-                                    <h3></h3> <!-- nome utente -->
-                                    <span></span> <!-- ultimo messaggio -->
-                                </div>
 
-                                <span></span> <!-- position absolute data ultimo messaggio -->
                             </div>
                         </div>
                     </div>
                     <!-- colonna destra -->
-                    <div class="col-8">
+                    <div class="col-8 ps-0">
                         <div class="nav-right">
-                            <div class="avatar-container">
+                            <div class="nav-left d-flex bg-nav p-2">
+                                <div class="user-data d-flex align-items-center flex-grow-1">
+                                    <div class="avatar-container flex-shrink-0">
+                                        <img src="img/avatar_1.jpg" alt="">
+                                    </div>
+                                    <div class="ps-2">
+                                        <h5 class="m-0">Nome Utente</h5><!-- nome utente -->
+                                        <span class="fs-6">ultimo accesso</span>
+
+                                    </div>
+                                </div>
+                                <div class="nav-left-btn d-flex align-items-center gap-3 justify-content-end fs-4 pe-3">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <!-- <div class="avatar-container">
                                 <img src="" alt="">
                             </div>
 
                             <div>
-                                <h3></h3> <!-- nome utente -->
-                                <span></span> <!-- ultimo messaggio -->
+                                <h3></h3>
+                                <span></span>
                             </div>
 
                             <div>
-                                <i></i><!-- icon -->
-                                <i></i><!-- icon -->
-                                <i></i><!-- icon -->
-                            </div>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div> -->
                         </div>
 
                         <!-- box chat -->
