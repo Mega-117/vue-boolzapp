@@ -1,0 +1,46 @@
+.bg-page{
+    width: 100%;
+    height: 100vh;
+    background-color: #dadbd6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-green-bar{
+    background-color: #0c9587;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.bg-nav{
+    background-color: #ebeaeb;
+}
+
+.user-data{
+    width: 100px;
+    height: 50px;
+}
+.nav-left-btn{
+    width: 100px;
+    height: 50px;
+}
+.nav-left-btn i{
+    color: #b0b1b2;
+}
+.avatar-container{
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar-container img{
+    height: 100%;
+    width: 100%;
+}
