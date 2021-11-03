@@ -7,6 +7,10 @@ h5{
     font-size: 14px;
 }
 
+.text-light-grey{
+    color: #b7b8bb;
+}
+
 a{
     color: #140c0c;
     opacity: 0.5;
@@ -17,6 +21,11 @@ a{
 }
 
 /* ********************* */
+
+.box{
+     height: 90vh;/*  */
+    
+}
 
 .bg-page{
     width: 100%;
@@ -84,11 +93,20 @@ a{
 
 .chats-section{
     background-color: #fafafa;
+    flex-grow: 1;
 }
 
 
 .row .col-8{
     border-left: 1px solid #d6d6d6;
+}
+
+.box-chat{
+    flex-grow: 1;
+    height: 300px;
+    background-image: url("../img/mine.jpg");
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
