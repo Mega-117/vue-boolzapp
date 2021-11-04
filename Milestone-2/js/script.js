@@ -105,6 +105,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 }
             ],
             activeChat: {},
+            activeUser: "",
+
 
             messaggioTesto: "",
         },
@@ -113,12 +115,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
                 this.listaMessaggi.push({
                     text: this.newMessage,
-                    type: "sended",
+                    status: "sent",
                 });
                 this.newMessage = "";
             },
+
+
             onClickChat(chat, i) {
-                this.activeChat = chat.messages;
+
+                this.activeChat = chat;
                 this.listaMessaggi = [];
                 for (let i = 0; i < chat.messages.length; i++) {
                     let messaggio = chat.messages[i].text;
