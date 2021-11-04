@@ -150,9 +150,9 @@
                                     class="fs-4 far fa-smile"></i></button>
                             <div class="input-group">
 
-                                <input v-model="newMessage" type="text" class="form-control bbb"
-                                    placeholder="Scrivi un messaggio" aria-label="Recipient's username"
-                                    aria-describedby="button-addon2">
+                                <input v-on:keyup.enter="printMessage()" v-model="newMessage" type="text"
+                                    class="form-control bbb" placeholder="Scrivi un messaggio"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
                             </div>
                             <button @click="printMessage()" class="btn btn-outline-secondary border-0" type="button"
                                 id="button-addon2"><i class="fs-4 fas fa-microphone"></i></button>

@@ -92,18 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
             newMessage: "",
-            listaMessaggi: [
-                {
-                    text: "Messaggio inviato",
-                    status: "sent",
-                    date: "10/10/10"
-                },
-                {
-                    text: "Messaggio ricevuto",
-                    status: "received",
-                    date: "10/10/10"
-                }
-            ],
+
             activeChat: {},
 
             ultimoAccesso: "",
@@ -113,11 +102,15 @@ window.addEventListener("DOMContentLoaded", function () {
         methods: {
             printMessage() {
 
-                this.listaMessaggi.push({
+
+                this.activeChat.messages.push({
+                    date: "data",
                     text: this.newMessage,
                     status: "sent",
                 });
                 this.newMessage = "";
+
+
             },
 
 
@@ -135,7 +128,9 @@ window.addEventListener("DOMContentLoaded", function () {
         },
         mounted() {
             this.activeChat = this.listaChat[0];
+            console.log(this.activeChat);
             let messaggiRicevuti = this.activeChat.messages.filter(el => el.status === "received");
+            console.log(messaggiRicevuti);
             this.ultimoAccesso = messaggiRicevuti[messaggiRicevuti.length - 1].date;
 
         }
