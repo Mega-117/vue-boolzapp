@@ -77,11 +77,11 @@
                             <!-- chat list -->
                             <div class="chat-list-container me-2">
 
-                                <div v-for="chat in listaChat" class="chat-list d-flex bg-chat-list p-2">
+                                <div v-for="(chat, i) in listaChat" class="chat-list d-flex bg-chat-list p-2">
 
                                     <div class="chat d-flex align-items-center flex-grow-1">
                                         <div class="avatar-container flex-shrink-0">
-                                            <img src="img/avatar_1.jpg" alt="">
+                                            <img :src="chat.avatar" alt="">
                                         </div>
                                         <div class="ps-3 line-height-1">
                                             <h5 class="m-0">Nome Utente</h5><!-- nome utente -->

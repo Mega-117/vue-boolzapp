@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Boolzapp</title>
+</head>
+
+<body>
+    <div id="app">
+        <header></header>
+        <main>
+            <div class="bg-page"></div>
+            <div class="bg-green-bar"></div><!-- postion absolute -->
+            <div class="container bg-white mt-4 mb-4 p-0 box">
+                <div class="row">
+                    <!-- colonna sinistra -->
+                    <div class="col-4 pe-0">
+                        <!-- nav left -->
+                        <div class="nav-left d-flex bg-nav p-2">
+                            <div class="user-data d-flex align-items-center flex-grow-1">
+                                <div class="avatar-container flex-shrink-0">
+                                    <img src="img/avatar_io.jpg" alt="">
+                                </div>
+                                <h5 class="ps-2">Nome Utente</h5><!-- nome utente -->
+                            </div>
+                            <div class="nav-left-btn d-flex align-items-center gap-3 justify-content-end fs-4 pe-3">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+
+                        <!-- notifications-settings -->
+                        <div class="notifications-settings d-flex align-items-center p-2 bg-notifications-settings">
+
+                            <div
+                                class="notifications-status d-flex align-items-center justify-content-center flex-shrink-0 bg-white">
+                                <i class="fs-5 fas fa-bell-slash"></i>
+                            </div>
+                            <div class="ps-2 line-height-1">
+                                <h5 class="m-0">Ricevi notifiche di nuovi messaggi</h5><!-- nome utente -->
+                                <a href="#">
+                                    <span class="text-small">ultimo accesso</span>
+                                </a>
+
+                            </div>
+
+
+                        </div>
+                        <div class="chats-section">
+
+                            <!-- search bar -->
+                            <div class="p-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                            id="btn-search" class="fas fa-search"></i></button>
+                                    <input type="text" class="form-control" placeholder=""
+                                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                </div>
+                            </div>
+
+                            <!-- chat list -->
+                            <div class="chat-list-container me-2">
+
+                                <div v-for="(chat, i) in listaChat" class="chat-list d-flex bg-chat-list p-2">
+
+                                    <div class="chat d-flex align-items-center flex-grow-1">
+                                        <div class="avatar-container flex-shrink-0">
+                                            <img :src="chat.avatar" alt="">
+                                        </div>
+                                        <div class="ps-3 line-height-1">
+                                            <h5 class="m-0">{{chat.nome}}</h5><!-- nome utente -->
+                                            <span class="text-small text-light-grey">{{chat.ultimoMessaggio}}</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <span class="text-light-grey data pe-2">{{chat.dataUltimoMessaggio}}</span>
+                                        <!-- position absolute data ultimo messaggio -->
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- colonna destra -->
+                    <div class="col-8 ps-0">
+                        <div class="nav-right">
+                            <div class="nav-left d-flex bg-nav p-2">
+                                <div class="user-data d-flex align-items-center flex-grow-1">
+                                    <div class="avatar-container flex-shrink-0">
+                                        <img src="img/avatar_1.jpg" alt="">
+                                    </div>
+                                    <div class="ps-2">
+                                        <h5 class="m-0">Nome Utente</h5><!-- nome utente -->
+                                        <span class="fs-6">ultimo accesso</span>
+
+                                    </div>
+                                </div>
+                                <div class="nav-left-btn d-flex align-items-center gap-3 justify-content-end fs-4 pe-3">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- box chat -->
+                        <div class="box-chat">
+                            <div v-for="myMessage in listaMessaggi" class="message-box"
+                                v-bind:class="myMessage.type==='sended'?'message-sended':'message-recived'">
+                                <div class="message-container line-height-1 d-flex flex-column">
+                                    <p class="m-0">{{myMessage.text}}</p>
+                                    <span class="data text-light-grey-2">data</span><!-- position absolute data -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- message area -->
+                        <div class="message-area d-flex p-2 gap-1">
+
+                            <button class="btn btn-outline-secondary border-0" type="button" id="button-addon1"><i
+                                    class="fs-4 far fa-smile"></i></button>
+                            <div class="input-group">
+
+                                <input v-model="newMessage" type="text" class="form-control bbb"
+                                    placeholder="Scrivi un messaggio" aria-label="Recipient's username"
+                                    aria-describedby="button-addon2">
+                            </div>
+                            <button @click="printMessage()" class="btn btn-outline-secondary border-0" type="button"
+                                id="button-addon2"><i class="fs-4 fas fa-microphone"></i></button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

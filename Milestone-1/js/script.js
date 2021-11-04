@@ -13,19 +13,19 @@ window.addEventListener("DOMContentLoaded", function () {
                 },
                 {
                     nome: "Riccardo Mengoni",
-                    avatar: "img/avatar_1.jpg",
+                    avatar: "img/avatar_2.jpg",
                     messaggio: "ciao",
                     dataUltimoMessaggio: "10",
                 },
                 {
                     nome: "Paolo Fontana",
-                    avatar: "img/avatar_1.jpg",
+                    avatar: "img/avatar_3.jpg",
                     messaggio: "ciao",
                     dataUltimoMessaggio: "10",
                 },
                 {
                     nome: "Michele Scotti",
-                    avatar: "img/avatar_1.jpg",
+                    avatar: "img/avatar_4.jpg",
                     messaggio: "ciao",
                     dataUltimoMessaggio: "10",
                 },
