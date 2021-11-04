@@ -1,3 +1,25 @@
+/* scrolbar style */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 /* font */
 h5{
     font-size: 16px;
@@ -121,6 +143,8 @@ a{
     height: calc(90vh - 66px - 55px);
     background-image: url("../img/mine.jpg");
     margin-right: 5px;
+    overflow: auto;
+    
 }
 
 .message-area{

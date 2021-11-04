@@ -110,8 +110,24 @@ window.addEventListener("DOMContentLoaded", function () {
                 });
                 this.newMessage = "";
 
+                console.log(this.activeChat.messages);
+
+
+                this.newMessage = "ok";
+                console.log(this.activeChat);
+                this.activeChat.messages.push({
+                    date: "data",
+                    text: this.newMessage,
+                    status: "received",
+                });
+                this.newMessage = "";
+
+
+
+
 
             },
+
 
 
 
