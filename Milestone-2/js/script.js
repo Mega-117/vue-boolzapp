@@ -105,8 +105,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 }
             ],
             activeChat: {},
-            activeUser: "",
 
+            ultimoAccesso: "",
 
             messaggioTesto: "",
         },
@@ -121,25 +121,23 @@ window.addEventListener("DOMContentLoaded", function () {
             },
 
 
+
             onClickChat(chat, i) {
 
                 this.activeChat = chat;
+                console.log(this.activeChat);
                 this.listaMessaggi = [];
-                for (let i = 0; i < chat.messages.length; i++) {
-                    let messaggio = chat.messages[i].text;
-                    let statoMessaggio = chat.messages[i].status;
-                    let dataMessaggio = chat.messages[i].date;
-                    console.log(messaggio);
-                    console.log(statoMessaggio);
-                    this.listaMessaggi.push({
-                        date: dataMessaggio,
-                        text: messaggio,
-                        status: statoMessaggio,
-                    });
-                };
 
+                let messaggiRicevuti = this.activeChat.messages.filter(el => el.status === "received");
+                this.ultimoAccesso = messaggiRicevuti[messaggiRicevuti.length - 1].date;
 
             }
+        },
+        mounted() {
+            this.activeChat = this.listaChat[0];
+            let messaggiRicevuti = this.activeChat.messages.filter(el => el.status === "received");
+            this.ultimoAccesso = messaggiRicevuti[messaggiRicevuti.length - 1].date;
+
         }
     });
 });

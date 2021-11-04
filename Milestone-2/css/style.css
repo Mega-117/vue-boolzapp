@@ -118,7 +118,7 @@ a{
 }
 
 .box-chat{
-    height: calc(90vh - 66px - 54px);
+    height: calc(90vh - 66px - 55px);
     background-image: url("../img/mine.jpg");
     margin-right: 5px;
 }

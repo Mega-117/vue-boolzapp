@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="">
                                         <span
-                                            class="text-light-grey data chat-list-data pe-2">{{chat.messages[chat.messages.length
+                                            class="text-light-grey data chat-list-data pe-2 ">{{chat.messages[chat.messages.length
                                             -
                                             1].date}}</span>
                                         <!-- position absolute data ultimo messaggio -->
@@ -116,7 +116,8 @@
                                     </div>
                                     <div class="ps-2">
                                         <h5 class="m-0">{{activeChat.name}}</h5><!-- nome utente -->
-                                        <span class="fs-6">ultimo accesso </span>
+                                        <span class="text-small text-light-grey">ultimo accesso {{ultimoAccesso}}
+                                        </span>
 
                                     </div>
                                 </div>
@@ -131,7 +132,7 @@
 
                         <!-- box chat -->
                         <div class="box-chat">
-                            <div v-for="message in listaMessaggi" class="message-box"
+                            <div v-for="message in activeChat.messages" class="message-box"
                                 v-bind:class="message.status==='sent'?'message-sended':'message-recived'">
                                 <div class="message-container line-height-1 d-flex flex-column">
                                     <p class="m-0">{{message.text}}</p>
