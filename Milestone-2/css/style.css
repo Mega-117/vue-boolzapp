@@ -21,7 +21,7 @@ a{
 }
 /* utility */
 .line-height-1{
-    line-height: 15px;
+    line-height: 23px;
 }
 
 /* ********************* */
@@ -128,10 +128,25 @@ a{
     text-align: end;
 }
 
+.chat-list-data{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.dati-chat-list-left{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+
+
 .message-container{
-   background-color: #d6fabe;
-   border-radius: 10px;
-   padding: 5px 15px 4px;
+    border-radius: 10px;
+    padding: 3px 15px 2px;
+    background-color: #d6fabe;
 }
 
 .message-box{
@@ -142,8 +157,15 @@ a{
     display: flex;
     justify-content: flex-end;
 }
+
+.message-sended .message-container{
+    background-color: #d6fabe;
+}
 .message-recived{
     display: flex;
+}
+.message-recived .message-container{
+    background-color: #ffffff;
 }
 
 
