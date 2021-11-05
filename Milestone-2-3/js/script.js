@@ -99,13 +99,17 @@ window.addEventListener("DOMContentLoaded", function () {
             ultimoAccesso: "",
 
             messaggioTesto: "",
+
+            chatDaCercare: "",
         },
         methods: {
             printMessage() {
 
+                let data = new Date().toLocaleDateString();
+                let orario = new Date().toLocaleTimeString();
 
                 this.activeChat.messages.push({
-                    date: "data",
+                    date: (data + "    " + orario),
                     text: this.newMessage,
                     status: "sent",
                 });
@@ -114,16 +118,18 @@ window.addEventListener("DOMContentLoaded", function () {
                 console.log(this.activeChat.messages);
 
 
-                /* function numeriRandom(min, max) {
+                function numeriRandom(min, max) {
                     return Math.floor(Math.random() * (max - min + 1) + min);
                 }
 
-                this.newMessage = this.risposte[numeriRandom(0, this.risposte.length - 1)]; */
-                setTimeout(function () {
-                    this.newMessage = "ok";
+                setTimeout(() => {
+                    data = new Date().toLocaleDateString();
+                    orario = new Date().toLocaleTimeString();
+                    this.newMessage = this.risposte[numeriRandom(0, this.risposte.length - 1)];
+                    /* this.newMessage = "ok"; */
                     console.log(this.activeChat);
                     this.activeChat.messages.push({
-                        date: "data",
+                        date: (data + "    " + orario),
                         text: this.newMessage,
                         status: "received",
                     });
@@ -134,6 +140,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
                 console.log(this.listaChat);
+
+            },
+
+            filterChat() {
+                return this.listaChat.filter((chat) => {
+                    return chat.name.toLowerCase().includes(this.chatDaCercare.toLowerCase().trim());
+                });
 
             },
 

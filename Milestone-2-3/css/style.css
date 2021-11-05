@@ -125,7 +125,7 @@ a{
 .chat-list:hover{
     background-color: #eaebeb;
 }
-.chat-list:focus{
+.chat-list:active{
     background-color: #eaebeb;
 }
 
