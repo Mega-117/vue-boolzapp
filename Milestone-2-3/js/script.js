@@ -143,12 +143,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
             },
 
-            filterChat() {
-                return this.listaChat.filter((chat) => {
-                    return chat.name.toLowerCase().includes(this.chatDaCercare.toLowerCase().trim());
-                });
 
-            },
 
 
 
