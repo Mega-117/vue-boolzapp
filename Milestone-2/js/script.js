@@ -90,6 +90,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 },
             ],
 
+            risposte: ["Ciao!", "No", "Tutto bene", "Bene", "A stasera", "Ci vediamo dopo"],
 
             newMessage: "",
 
@@ -113,18 +114,26 @@ window.addEventListener("DOMContentLoaded", function () {
                 console.log(this.activeChat.messages);
 
 
-                this.newMessage = "ok";
-                console.log(this.activeChat);
-                this.activeChat.messages.push({
-                    date: "data",
-                    text: this.newMessage,
-                    status: "received",
-                });
-                this.newMessage = "";
+                /* function numeriRandom(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1) + min);
+                }
+
+                this.newMessage = this.risposte[numeriRandom(0, this.risposte.length - 1)]; */
+                setTimeout(function () {
+                    this.newMessage = "ok";
+                    console.log(this.activeChat);
+                    this.activeChat.messages.push({
+                        date: "data",
+                        text: this.newMessage,
+                        status: "received",
+                    });
+                    this.newMessage = "";
+
+                }, 3000);
 
 
 
-
+                console.log(this.listaChat);
 
             },
 
