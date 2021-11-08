@@ -44,7 +44,7 @@ a{
 }
 /* utility */
 .line-height-1{
-    line-height: 18px;
+    line-height: 21px;
 }
 
 /* ********************* */
@@ -154,8 +154,12 @@ a{
 
 .data{
     font-size: 12px;
+    padding-left: 50px;
+    
+}
+
+.msg-date-container{
     text-align: end;
-    padding-left: 25px;
 }
 
 .chat-list-data{
@@ -175,8 +179,9 @@ a{
 
 .message-container{
     border-radius: 10px;
-    padding: 3px 15px 2px;
-    background-color: #d6fabe;
+    padding: 5px 15px 5px;
+    max-width: 100%;
+    cursor: default;
 }
 
 .message-box{
@@ -210,8 +215,14 @@ a{
 
 .msg-dopdown{
     position: absolute;
-    bottom: -6px;
-    left: 10px;
+    bottom: -1px;
+    left: 13px;
+    display: none;
+    
+}
+
+.message-container:hover .msg-dopdown{
+    display: block;
 }
 
 .msg-dopdown a i{

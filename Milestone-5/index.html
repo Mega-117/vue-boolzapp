@@ -25,7 +25,7 @@
         <header></header>
         <main>
             <div class="bg-page"></div>
-            <div class="bg-green-bar"></div><!-- postion absolute -->
+            <div class="bg-green-bar"></div>
             <div class="container bg-white mt-4 mb-4 p-0 box">
                 <div class="row">
                     <!-- colonna sinistra -->
@@ -36,7 +36,7 @@
                                 <div class="avatar-container flex-shrink-0">
                                     <img src="img/avatar_io.jpg" alt="">
                                 </div>
-                                <h5 class="ps-2">Nome Utente</h5><!-- nome utente -->
+                                <h5 class="ps-2">Nome Utente</h5>
                             </div>
                             <div class="nav-left-btn d-flex align-items-center gap-3 justify-content-end fs-4 pe-3">
                                 <i class="fas fa-circle-notch"></i>
@@ -53,9 +53,9 @@
                                 <i class="fs-5 fas fa-bell-slash"></i>
                             </div>
                             <div class="ps-2 line-height-1">
-                                <h5 class="m-0 text-nowrap">Ricevi notifiche di nuovi messaggi</h5><!-- nome utente -->
+                                <h5 class="m-0 text-nowrap">Ricevi notifiche di nuovi messaggi</h5>
                                 <a href="#">
-                                    <span class="text-small">ultimo accesso</span>
+                                    <span class="text-small">Attiva notifiche desktop</span>
                                 </a>
 
                             </div>
@@ -71,6 +71,7 @@
                                             id="btn-search" class="fas fa-search"></i></button>
                                     <input v-model="chatDaCercare" type="text" class="form-control" placeholder=""
                                         aria-label="Example text with button addon" aria-describedby="button-addon1">
+
                                 </div>
                             </div>
 
@@ -85,7 +86,7 @@
                                             <img :src="`img/avatar${chat.avatar}.jpg`" :alt="`user${chat.avatar}.jpg`">
                                         </div>
                                         <div class="dati-chat-list-left ps-3 line-height-1 text-light-grey">
-                                            <h5 class="text-black m-0">{{chat.name}}</h5><!-- nome utente -->
+                                            <h5 class="text-black m-0">{{chat.name}}</h5>
                                             <span class="text-small">
                                                 {{chat.messages[chat.messages.length - 1].text}}</span>
 
@@ -115,7 +116,7 @@
                                         <img :src="`img/avatar${activeChat.avatar}.jpg`" alt="">
                                     </div>
                                     <div class="ps-2">
-                                        <h5 class="m-0">{{activeChat.name}}</h5><!-- nome utente -->
+                                        <h5 class="m-0">{{activeChat.name}}</h5>
                                         <span class="text-small text-light-grey">ultimo accesso {{ultimoAccesso}}
                                         </span>
 
@@ -134,9 +135,12 @@
                         <div class="box-chat">
                             <div v-for="(message, i) in activeChat.messages" class="message-box"
                                 v-bind:class="message.status==='sent'?'message-sended':'message-recived'">
-                                <div class="message-container line-height-1 d-flex flex-column position-relative">
-                                    <p class=" m-0">{{message.text}}</p>
-                                    <span class="data text-light-grey-2 text-small">{{message.date}}</span>
+                                <div class="message-container line-height-1 position-relative">
+                                    <p class=" m-0">{{message.text}} </p>
+                                    <div class="msg-date-container">
+                                        <span class="data text-light-grey-2 text-small">{{message.date}} </span>
+
+                                    </div>
                                     <!-- position absolute data -->
                                     <div class="dropdown msg-dopdown">
                                         <a class="btn bnt-message dropdown-toggle p-1" href="#" role="button"
